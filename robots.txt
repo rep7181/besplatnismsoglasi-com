@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.besplatnismsoglasi.com/sitemap.xml
+Sitemap: https://www.besplatnismsoglasi.com/sitemap-dynamic.xml
