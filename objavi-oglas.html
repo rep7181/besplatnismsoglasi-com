@@ -213,14 +213,17 @@
                     <input type="number" id="xAge" min="18" max="99" required placeholder="Npr. 28">
                 </div>
                 <div>
+                    <label>Dr&zcaron;ava <span class="req">*</span></label>
+                    <select id="xCountry" required onchange="updRegions()">
+                        <option value="HR">&#127469;&#127479; Hrvatska</option>
+                        <option value="RS">&#127479;&#127480; Srbija</option>
+                        <option value="BA">&#127463;&#127462; BiH</option>
+                    </select>
+                </div>
+                <div>
                     <label>Regija <span class="req">*</span></label>
                     <select id="xRegion" required onchange="updCityOpts(this.value)">
                         <option value="">Odaberite regiju...</option>
-                        <option>Grad Zagreb</option>
-                        <option>Dalmacija</option>
-                        <option>Slavonija</option>
-                        <option>Istra i Primorje</option>
-                        <option>Središnja Hrvatska</option>
                     </select>
                 </div>
                 <div>
@@ -250,6 +253,9 @@
                         <option value="chat">Chat</option>
                         <option value="diskretno">Diskretno</option>
                         <option value="veza">Veza</option>
+                        <option value="parovi">Parovi</option>
+                        <option value="trojka">Trojka</option>
+                        <option value="ona-trazi-nju">Ona traži nju</option>
                     </select>
                 </div>
                 <div>
@@ -275,6 +281,13 @@
                         <label class="chk-lbl"><input type="checkbox" value="Fetish"> Fetish</label>
                         <label class="chk-lbl"><input type="checkbox" value="Rimming"> Rimming</label>
                         <label class="chk-lbl"><input type="checkbox" value="69"> 69</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Dominacija"> Dominacija</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Dopisivanje"> Dopisivanje</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Hotline"> Hotline</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Starije"> Starije</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Upoznavanje"> Upoznavanje</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Drkanje"> Drkanje</label>
+                        <label class="chk-lbl"><input type="checkbox" value="Dobar sex"> Klinke</label>
                     </div>
                 </div>
                 <div class="full">
@@ -371,8 +384,13 @@
     <script>
     function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},3e3)}
 
-    var C={'Grad Zagreb':['Zagreb','Velika Gorica','Samobor','Zapresic','Dugo Selo','Sveta Nedelja','Jastrebarsko','Vrbovec','Ivanic-Grad','Rugvica'],'Dalmacija':['Split','Zadar','Dubrovnik','Sibenik','Makarska','Trogir','Solin','Omis','Sinj','Metkovic','Imotski','Kastela','Biograd na Moru','Knin','Vodice','Vrgorac','Gospic','Ploce','Novalja'],'Slavonija':['Osijek','Slavonski Brod','Vukovar','Vinkovci','Pozega','Dakovo','Nova Gradiska','Virovitica','Nasice','Zupanja','Slatina','Orahovica','Belisce','Beli Manastir','Donji Miholjac'],'Istra i Primorje':['Rijeka','Pula','Opatija','Rovinj','Porec','Umag','Labin','Buzet','Pazin','Crikvenica','Senj','Krk','Mali Losinj','Rab','Novi Vinodolski','Delnice'],'Središnja Hrvatska':['Varazdin','Karlovac','Sisak','Bjelovar','Koprivnica','Cakovec','Krizevci','Kutina','Petrinja','Zabok','Krapina','Ogulin','Duga Resa','Daruvar','Zlatar','Pregrada']};
-    function updCityOpts(reg){var s=document.getElementById('xCity');s.innerHTML='<option value="">Svi gradovi</option>';if(reg&&C[reg])C[reg].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'})}
+    var C={
+        'HR':{'Grad Zagreb':['Zagreb','Velika Gorica','Samobor','Zapresic','Dugo Selo','Sveta Nedelja','Jastrebarsko','Vrbovec','Ivanic-Grad','Rugvica'],'Dalmacija':['Split','Zadar','Dubrovnik','Sibenik','Makarska','Trogir','Solin','Omis','Sinj','Metkovic','Imotski','Kastela','Biograd na Moru','Knin','Vodice','Vrgorac','Gospic','Ploce','Novalja'],'Slavonija':['Osijek','Slavonski Brod','Vukovar','Vinkovci','Pozega','Dakovo','Nova Gradiska','Virovitica','Nasice','Zupanja','Slatina','Orahovica','Belisce','Beli Manastir','Donji Miholjac'],'Istra i Primorje':['Rijeka','Pula','Opatija','Rovinj','Porec','Umag','Labin','Buzet','Pazin','Crikvenica','Senj','Krk','Mali Losinj','Rab','Novi Vinodolski','Delnice'],'Središnja Hrvatska':['Varazdin','Karlovac','Sisak','Bjelovar','Koprivnica','Cakovec','Krizevci','Kutina','Petrinja','Zabok','Krapina','Ogulin','Duga Resa','Daruvar','Zlatar','Pregrada']},
+        'RS':{'Beograd':['Beograd','Zemun','Novi Beograd'],'Vojvodina':['Novi Sad','Subotica','Zrenjanin','Pancevo','Sombor','Kikinda','Vrbas','Sremska Mitrovica'],'Šumadija':['Kragujevac','Jagodina'],'Južna Srbija':['Niš','Leskovac','Vranje','Pirot'],'Zapadna Srbija':['Čačak','Užice','Kraljevo','Valjevo','Šabac','Kruševac','Novi Pazar'],'Istočna Srbija':['Smederevo','Požarevac','Bor','Zaječar']},
+        'BA':{'Sarajevo':['Sarajevo','Ilidža'],'Banja Luka':['Banja Luka','Prijedor','Gradiška'],'Tuzla':['Tuzla','Lukavac'],'Zenica':['Zenica','Travnik','Bugojno'],'Mostar':['Mostar','Čapljina','Konjic'],'Brčko':['Brčko'],'Bijeljina':['Bijeljina','Zvornik'],'Republika Srpska':['Doboj','Trebinje'],'Federacija BiH':['Bihać','Sanski Most','Livno']}
+    };
+    function updRegions(){var cc=document.getElementById('xCountry').value;var s=document.getElementById('xRegion');s.innerHTML='<option value="">Odaberite regiju...</option>';var regs=C[cc]||C['HR'];Object.keys(regs).forEach(function(r){s.innerHTML+='<option>'+r+'</option>'});document.getElementById('xCity').innerHTML='<option value="">Odaberite regiju prvo</option>'}
+    function updCityOpts(reg){var cc=document.getElementById('xCountry').value;var s=document.getElementById('xCity');var regs=C[cc]||C['HR'];s.innerHTML='<option value="">Svi gradovi</option>';if(reg&&regs[reg])regs[reg].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'})}
     function getChk(id){var r=[];document.querySelectorAll('#'+id+' input:checked').forEach(function(c){r.push(c.value)});return r}
     function toggleType(){var cat=document.getElementById('xCat').value;document.getElementById('typeWrap').style.display=false?'none':''}
     function submitL(e){
@@ -395,7 +413,8 @@
         if(!wa&&!vb&&!em){toast('Unesite WhatsApp, Viber ili email!');return}
         if(!rk){toast('Odaberite regiju!');return}
         toast('Objavljujem oglas...');
-        var adBody={nick:nick||'',age:a,height:height,weight:weight,rk:rk,ct:ct||'',wa:wa||'',vb:vb||'',em:em||'',d:d||'On traži nju.',tp:tp||'hookup',acts:acts,locs:locs};
+        var country=document.getElementById('xCountry').value||'HR';
+        var adBody={nick:nick||'',age:a,height:height,weight:weight,country:country,rk:rk,ct:ct||'',wa:wa||'',vb:vb||'',em:em||'',d:d||'On traži nju.',tp:tp||'hookup',acts:acts,locs:locs};
         try{var ak=sessionStorage.getItem('go24_admin_pass');if(ak)adBody.adminKey=ak}catch(e){}
         fetch('/.netlify/functions/ads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(adBody)}).then(function(r){
             if(r.status===429)return r.json().then(function(d){toast(d.error||'Previše oglasa. Molimo pričekajte.');throw new Error('rate limited')});
@@ -438,6 +457,7 @@
     try{if(localStorage.getItem('dk')==='1'){document.body.classList.add('dark');document.getElementById('darkBtn').innerHTML='&#9788; Svijetlo'}}catch(e){}
 
     window.addEventListener('scroll',function(){document.getElementById('bttBtn').classList.toggle('show',window.scrollY>400)});
+    updRegions();
     </script>
 </body>
 </html>

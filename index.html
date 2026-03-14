@@ -261,12 +261,12 @@
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"Sto su sms oglasi i kako funkcioniraju?","acceptedAnswer":{"@type":"Answer","text":"SMS oglasi su besplatni osobni kontaktni oglasi za ljude koji traze muskarce. Na BesplatniSMSOglasi.com objavljujete oglas sa svojom dobi, WhatsApp brojem i opisom, a drugi muskarci vas kontaktiraju izravno putem WhatsAppa - potpuno besplatno."}},
+        {"@type":"Question","name":"Sto su sms oglasi i kako funkcioniraju?","acceptedAnswer":{"@type":"Answer","text":"SMS oglasi su besplatni osobni kontaktni oglasi za ljude koji traže žene. Na BesplatniSMSOglasi.com objavljujete oglas sa svojom dobi, WhatsApp brojem i opisom, a žene vas kontaktiraju izravno putem WhatsAppa - potpuno besplatno."}},
         {"@type":"Question","name":"Je li BesplatniSMSOglasi.com besplatan?","acceptedAnswer":{"@type":"Answer","text":"Da, 100% besplatno! Za razliku od SMS oglasa, ovdje nema placanja. Objava sms oglasa, pregledavanje i kontaktiranje - sve je besplatno putem WhatsAppa. Bez pretplate, bez skrivenih naknada."}},
-        {"@type":"Question","name":"Koja je razlika izmedu BesplatniSMSOglasi i SMS oglasa?","acceptedAnswer":{"@type":"Answer","text":"Na BesplatniSMSOglasi kontaktirate muskarce besplatno putem WhatsAppa, dok SMS oglasi naplacuju svaku poruku. Takoder nudimo detaljne profile s opisima, aktivnostima i filtrima - mnogo vise od 160 znakova SMS-a."}},
+        {"@type":"Question","name":"Koja je razlika izmedu BesplatniSMSOglasi i SMS oglasa?","acceptedAnswer":{"@type":"Answer","text":"Na BesplatniSMSOglasi kontaktirate žene besplatno putem WhatsAppa, dok SMS oglasi naplacuju svaku poruku. Takoder nudimo detaljne profile s opisima, aktivnostima i filtrima - mnogo vise od 160 znakova SMS-a."}},
         {"@type":"Question","name":"Mogu li pronaci osobne kontakte u svom gradu?","acceptedAnswer":{"@type":"Answer","text":"Da! Imamo sms oglase iz cijele Hrvatske - Zagreb, Split, Rijeka, Osijek, Zadar, Dubrovnik, Pula, Varazdin i mnogi drugi gradovi. Koristite filtar grada za pronalazenje osoba u vasem podrucju."}},
         {"@type":"Question","name":"Je li sigurno traziti kontakte online?","acceptedAnswer":{"@type":"Answer","text":"Uvijek preporucujemo oprez. Ne dijelite osobne podatke previse brzo i prvi put se nadite na javnom mjestu. Koristite nadimak umjesto pravog imena."}},
-        {"@type":"Question","name":"Koja je razlika izmedu hookupa i diskretnog susreta?","acceptedAnswer":{"@type":"Answer","text":"Hookup je za ljude koji traze brze, neobavezne susrete. Diskretno je za ljude koji zele privatne i anonimne susrete - cesto bi muskarci ili muskarci u vezama koji diskretno traze kontakt."}}
+        {"@type":"Question","name":"Koja je razlika izmedu hookupa i diskretnog susreta?","acceptedAnswer":{"@type":"Answer","text":"Hookup je za ljude koji traze brze, neobavezne susrete. Diskretno je za ljude koji zele privatne i anonimne susrete - često muškarci u vezama koji diskretno traže kontakt sa ženama."}}
     ]}
     </script>
     <script type="application/ld+json">
@@ -306,7 +306,7 @@
     <button class="btt" id="bttBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
 
     <div class="topbar"><div class="wrap">
-        <span><strong>BesplatniSMSOglasi.com</strong> &mdash; Sex osobni kontakti u Hrvatskoj</span>
+        <span><strong>BesplatniSMSOglasi.com</strong> - Sex oglasi u cijeloj Hrvatskoj</span>
         <button class="theme-toggle" onclick="toggleDark()" id="darkBtn">&#9789; Tamno</button>
     </div></div>
 
@@ -340,6 +340,7 @@
 
         <div class="notice"><strong>Napomena!</strong> Svi korisnici moraju imati 18+. Nezakonit sadr&zcaron;aj se odmah uklanja.</div>
 
+
         <div class="city-bar" id="cityBar"></div>
 
         <div class="search-box"><input type="text" class="search-input" id="searchInput" placeholder="Tra&zcaron;i u oglasima..." oninput="applyFilters()"></div>
@@ -349,10 +350,10 @@
             <div class="filter-grid">
                 <div class="fg-item"><label>Dob min</label><input type="number" id="fAf" placeholder="18" min="18" max="70" style="width:70px;min-width:70px" onchange="applyFilters()"></div>
                 <div class="fg-item"><label>Dob max</label><input type="number" id="fAt" placeholder="70" min="18" max="70" style="width:70px;min-width:70px" onchange="applyFilters()"></div>
-                <div class="fg-item"><label>Regija</label><select id="fReg" onchange="updCityOpts(this.value,'fCity');applyFilters()"><option value="">Sve</option><option>Grad Zagreb</option><option>Dalmacija</option><option>Slavonija</option><option>Istra i Primorje</option><option>Središnja Hrvatska</option></select></div>
+                <div class="fg-item"><label>Regija</label><select id="fReg" onchange="updCityOpts(this.value,'fCity');applyFilters()"><option value="">Sve</option></select></div>
                 <div class="fg-item"><label>Grad</label><select id="fCity" onchange="cityFilter=this.value;applyFilters();updCityTag()"><option value="">Svi gradovi</option></select></div>
-                <div class="fg-item"><label>Tra&zcaron;i</label><select id="fT" onchange="applyFilters()"><option value="">Svi tipovi</option><option value="hookup">Hookup</option><option value="date">Dejt</option><option value="chat">Chat</option><option value="diskretno">Diskretno</option><option value="veza">Veza</option></select></div>
-                <div class="fg-item"><label>Aktivnost</label><select id="fAct" onchange="applyFilters()"><option value="">Sve</option><option>Oralno</option><option>Analno</option><option>Doggy</option><option>Masa&zcaron;a</option><option>Ljubljenje</option><option>Fetish</option><option>Rimming</option><option>69</option></select></div>
+                <div class="fg-item"><label>Tra&zcaron;i</label><select id="fT" onchange="applyFilters()"><option value="">Svi tipovi</option><option value="hookup">Hookup</option><option value="date">Dejt</option><option value="chat">Chat</option><option value="diskretno">Diskretno</option><option value="veza">Veza</option><option value="parovi">Parovi</option><option value="trojka">Trojka</option><option value="ona-trazi-nju">Ona traži nju</option></select></div>
+                <div class="fg-item"><label>Aktivnost</label><select id="fAct" onchange="applyFilters()"><option value="">Sve</option><option>Oralno</option><option>Analno</option><option>Doggy</option><option>Masa&zcaron;a</option><option>Ljubljenje</option><option>Fetish</option><option>Rimming</option><option>69</option><option>Dominacija</option><option>Dopisivanje</option><option>Hotline</option><option>Starije</option><option>Upoznavanje</option><option>Drkanje</option><option>Dobar sex</option></select></div>
                 <div class="fg-item"><label>Mjesto</label><select id="fLoc" onchange="applyFilters()"><option value="">Sve</option><option>Vlastiti prostor</option><option>Auto</option><option>Hotel</option><option>Vani</option><option>Mogu putovati</option></select></div>
                 <div class="fg-item"><label>Objavljeno</label><select id="fWhen" onchange="applyFilters()"><option value="">Sve</option><option value="today">Danas</option><option value="week">Ovaj tjedan</option><option value="month">Ovaj mjesec</option></select></div>
                 <div class="fg-item"><label>Kontakt</label><select id="fContact" onchange="applyFilters()"><option value="">Svi</option><option value="wa">Ima WhatsApp</option><option value="vb">Ima Viber</option><option value="em">Ima Email</option></select></div>
@@ -377,15 +378,15 @@
             <form id="lForm" onsubmit="submitL(event)"><div class="fg">
                 <div><label>Nadimak</label><input type="text" id="xNick" maxlength="30" placeholder="Npr. CoolGuy28"></div>
                 <div><label>Dob <span class="req">*</span></label><input type="number" id="xAge" min="18" max="70" required placeholder="28"></div>
-                <div><label>Regija</label><select id="xRegion" onchange="updCityOpts(this.value,'xCity')"><option value="">Odaberi</option><option>Grad Zagreb</option><option>Dalmacija</option><option>Slavonija</option><option>Istra i Primorje</option><option>Središnja Hrvatska</option></select></div>
+                <div><label>Regija</label><select id="xRegion" onchange="updCityOpts(this.value,'xCity')"><option value="">Odaberi</option></select></div>
                 <div><label>Grad</label><select id="xCity"><option value="">Odaberi regiju prvo</option></select></div>
                 <div><label>Visina (cm)</label><input type="number" id="xHeight" min="100" max="250" placeholder="180"></div>
                 <div><label>Te&zcaron;ina (kg)</label><input type="number" id="xWeight" min="30" max="300" placeholder="75"></div>
-                <div><label>Tra&zcaron;i</label><select id="xType"><option value="hookup">Hookup</option><option value="date">Dejt</option><option value="chat">Chat</option><option value="diskretno">Diskretno</option><option value="veza">Veza</option></select></div>
+                <div><label>Tra&zcaron;i</label><select id="xType"><option value="hookup">Hookup</option><option value="date">Dejt</option><option value="chat">Chat</option><option value="diskretno">Diskretno</option><option value="veza">Veza</option><option value="parovi">Parovi</option><option value="trojka">Trojka</option><option value="ona-trazi-nju">Ona traži nju</option></select></div>
                 <div><label>WhatsApp</label><input type="text" id="xWa" placeholder="+385 91 234 5678"></div>
                 <div><label>Viber</label><input type="text" id="xVb" placeholder="+385 91 234 5678"></div>
                 <div><label>Email</label><input type="email" id="xEm" placeholder="vas@gmail.com"></div>
-                <div class="full"><label>Aktivnosti</label><div class="chk-group" id="xActs"><label class="chk-lbl"><input type="checkbox" value="Oralno"> Oralno</label><label class="chk-lbl"><input type="checkbox" value="Analno"> Analno</label><label class="chk-lbl"><input type="checkbox" value="Doggy"> Doggy</label><label class="chk-lbl"><input type="checkbox" value="Masa\u017ea"> Masa&zcaron;a</label><label class="chk-lbl"><input type="checkbox" value="Ljubljenje"> Ljubljenje</label><label class="chk-lbl"><input type="checkbox" value="Fetish"> Fetish</label><label class="chk-lbl"><input type="checkbox" value="Rimming"> Rimming</label><label class="chk-lbl"><input type="checkbox" value="69"> 69</label></div></div>
+                <div class="full"><label>Aktivnosti</label><div class="chk-group" id="xActs"><label class="chk-lbl"><input type="checkbox" value="Oralno"> Oralno</label><label class="chk-lbl"><input type="checkbox" value="Analno"> Analno</label><label class="chk-lbl"><input type="checkbox" value="Doggy"> Doggy</label><label class="chk-lbl"><input type="checkbox" value="Masa\u017ea"> Masa&zcaron;a</label><label class="chk-lbl"><input type="checkbox" value="Ljubljenje"> Ljubljenje</label><label class="chk-lbl"><input type="checkbox" value="Fetish"> Fetish</label><label class="chk-lbl"><input type="checkbox" value="Rimming"> Rimming</label><label class="chk-lbl"><input type="checkbox" value="69"> 69</label><label class="chk-lbl"><input type="checkbox" value="Dominacija"> Dominacija</label><label class="chk-lbl"><input type="checkbox" value="Dopisivanje"> Dopisivanje</label><label class="chk-lbl"><input type="checkbox" value="Hotline"> Hotline</label><label class="chk-lbl"><input type="checkbox" value="Starije"> Starije</label><label class="chk-lbl"><input type="checkbox" value="Upoznavanje"> Upoznavanje</label><label class="chk-lbl"><input type="checkbox" value="Drkanje"> Drkanje</label><label class="chk-lbl"><input type="checkbox" value="Dobar sex"> Klinke</label></div></div>
                 <div class="full"><label>Mjesto / logistika</label><div class="chk-group" id="xLocs"><label class="chk-lbl"><input type="checkbox" value="Vlastiti prostor"> Vlastiti prostor</label><label class="chk-lbl"><input type="checkbox" value="Auto"> Auto</label><label class="chk-lbl"><input type="checkbox" value="Hotel"> Hotel</label><label class="chk-lbl"><input type="checkbox" value="Vani"> Vani</label><label class="chk-lbl"><input type="checkbox" value="Mogu putovati"> Mogu putovati</label></div></div>
                 <div class="full"><label>Opis</label><textarea id="xDesc" placeholder="Opi&scaron;i sebe i &scaron;to tra&zcaron;i&scaron;..."></textarea></div>
                 <div class="form-warn"><strong>Napomena!</strong> Samo 18+. Nezakonit sadr&zcaron;aj se uklanja.</div>
@@ -395,12 +396,12 @@
 
         <div class="content-section" id="om">
             <h2>Besplatni SMS Oglasi &ndash; Besplatni Osobni Kontakti putem WhatsAppa</h2>
-            <p><strong>BesplatniSMSOglasi.com</strong> je najve&cacute;a stranica za <strong>sms oglase</strong> u Hrvatskoj &ndash; potpuno besplatno i bez registracije. Za razliku od SMS oglasa, ovdje kontaktirate mu&scaron;karce <strong>izravno putem WhatsAppa</strong> &ndash; besplatno, brzo i diskretno. Nema skupih SMS poruka, nema pretplate, nema skrivenih naknada.</p>
+            <p><strong>BesplatniSMSOglasi.com</strong> je najve&cacute;a stranica za <strong>sms oglase</strong> u Hrvatskoj &ndash; potpuno besplatno i bez registracije. Za razliku od SMS oglasa, ovdje kontaktirate žene <strong>izravno putem WhatsAppa</strong> &ndash; besplatno, brzo i diskretno. Nema skupih SMS poruka, nema pretplate, nema skrivenih naknada.</p>
 
             <h3>Za&scaron;to odabrati BesplatniSMSOglasi umjesto SMS oglasa?</h3>
             <ul>
                 <li><strong>100% besplatno</strong> &ndash; objava sms oglasa i kontaktiranje je potpuno besplatno, za razliku od pla&cacute;enih SMS oglasa</li>
-                <li><strong>Izravni WhatsApp kontakt</strong> &ndash; kontaktirajte mu&scaron;karce odmah putem WhatsAppa, bez skupih SMS poruka</li>
+                <li><strong>Izravni WhatsApp kontakt</strong> &ndash; kontaktirajte žene odmah putem WhatsAppa, bez skupih SMS poruka</li>
                 <li><strong>Bez registracije</strong> &ndash; objavite oglas u 30 sekundi bez kreiranja ra&ccaron;una</li>
                 <li><strong>Vi&scaron;e informacija</strong> &ndash; detaljni opisi, aktivnosti, preferencije &ndash; ne samo 160 znakova kao SMS</li>
                 <li><strong>Filtriraj i pretra&zcaron;uj</strong> &ndash; prona&dstrok;i to&ccaron;no ono &scaron;to tra&zcaron;i&scaron; po dobi, gradu, regiji i aktivnostima</li>
@@ -411,7 +412,7 @@
 
             <h3>Osobni kontakti &ndash; &scaron;to mo&zcaron;e&scaron; prona&cacute;i?</h3>
             <ul>
-                <li><strong>Hookup</strong> &ndash; brzi susreti za mu&scaron;karce koji tra&zcaron;e kontakt odmah</li>
+                <li><strong>Hookup</strong> &ndash; brzi susreti za ljude koji tra&zcaron;e kontakt odmah</li>
                 <li><strong>Dejt</strong> &ndash; upoznaj nove ljude za dejt i dru&zcaron;enje</li>
                 <li><strong>Diskretno</strong> &ndash; diskretni susreti za sve koji žele privatnost</li>
                 <li><strong>Chat</strong> &ndash; neobavezno dopisivanje s istomi&scaron;ljenicima</li>
@@ -484,10 +485,10 @@
             <h2>&Ccaron;esto Postavljana Pitanja &ndash; SMS Oglasi &amp; Osobni Kontakti</h2>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Kako mogu prona&cacute;i osobu za kontakt?</button><div class="fq-a"><div class="fq-a-inner">Pregledajte na&scaron;u listu oglasa s preko 1.800 aktivnih profila. Koristite filtre za pretra&zcaron;ivanje po dobi, gradu, regiji i aktivnostima. Kontaktirajte zanimljive osobe izravno putem WhatsAppa ili emaila.</div></div></div>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Je li BesplatniSMSOglasi.com besplatan?</button><div class="fq-a"><div class="fq-a-inner">Da, potpuno besplatan! Nema pla&cacute;anja, nema registracije. Mo&zcaron;ete objavljivati i pregledavati oglase bez ograni&ccaron;enja.</div></div></div>
-            <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Mogu li prona&cacute;i kontakte u svom gradu?</button><div class="fq-a"><div class="fq-a-inner">Da! Imamo oglase mu&scaron;karaca iz cijele Hrvatske &ndash; Zagreb, Split, Rijeka, Osijek, Zadar, Dubrovnik, Pula i mnogi drugi gradovi. Koristite filtar grada za pronala&zcaron;enje mu&scaron;karaca u va&scaron;em podru&ccaron;ju.</div></div></div>
+            <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Mogu li prona&cacute;i kontakte u svom gradu?</button><div class="fq-a"><div class="fq-a-inner">Da! Imamo oglase žena iz cijele Hrvatske &ndash; Zagreb, Split, Rijeka, Osijek, Zadar, Dubrovnik, Pula i mnogi drugi gradovi. Koristite filtar grada za pronalaženje žena u va&scaron;em podru&ccaron;ju.</div></div></div>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Kako objaviti oglas?</button><div class="fq-a"><div class="fq-a-inner">Ispunite obrazac sa svojom dobi, WhatsApp brojem i opisom onoga &scaron;to tra&zcaron;ite. Odaberite svoje aktivnosti i preferencije. Va&scaron; oglas se odmah prikazuje.</div></div></div>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Je li sigurno tra&zcaron;iti kontakte online?</button><div class="fq-a"><div class="fq-a-inner">Uvijek preporu&ccaron;ujemo oprez. Ne dijelite previ&scaron;e osobnih podataka prebrzo i prvi put se uvijek na&dstrok;ite na javnom mjestu. Koristite funkciju prijave za sumnjivo pona&scaron;anje.</div></div></div>
-            <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Koja je razlika izme&dstrok;u hookupa i diskretnog susreta?</button><div class="fq-a"><div class="fq-a-inner">Hookup je za mu&scaron;karce koji tra&zcaron;e brze, neobavezne susrete. Diskretno je za mu&scaron;karce koji &zcaron;ele privatne i anonimne susrete &ndash; &ccaron;esto bi osobe u vezama koji diskretno tra&zcaron;e kontakt.</div></div></div>
+            <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Koja je razlika izme&dstrok;u hookupa i diskretnog susreta?</button><div class="fq-a"><div class="fq-a-inner">Hookup je za ljude koji traže brze, neobavezne susrete. Diskretno je za ljude koji žele privatne i anonimne susrete &ndash; &ccaron;esto bi muškarce u vezama koji diskretno traže kontakt sa ženama.</div></div></div>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Trebate li imati 18 godina za kori&scaron;tenje stranice?</button><div class="fq-a"><div class="fq-a-inner">Da, usluga je samo za osobe starije od 18 godina.</div></div></div>
             <div class="fq"><button class="fq-q" onclick="toggleFaq(this)">Kako prijaviti oglas?</button><div class="fq-a"><div class="fq-a-inner">Kliknite na "Prijavi" ispod oglasa, odaberite razlog i po&scaron;aljite. Sve prijave brzo pregledavamo.</div></div></div>
         </div>
@@ -528,11 +529,16 @@
     <div class="toast" id="toast"></div>
 
     <script>
-    var TY=['hookup','date','chat','diskretno','veza'],
-        TL={hookup:'Hookup',date:'Dejt',chat:'Chat',diskretno:'Diskretno',veza:'Veza',
-        ACTS=['Oralno','Analno','Doggy','Masa\u017ea','Ljubljenje','Fetish','Rimming','69'],
+    var TY=['hookup','date','chat','diskretno','veza','parovi','trojka','ona-trazi-nju'],
+        TL={hookup:'Hookup',date:'Dejt',chat:'Chat',diskretno:'Diskretno',veza:'Veza',parovi:'Parovi',trojka:'Trojka','ona-trazi-nju':'Ona tra\u017ei nju'};
+    var ACTS=['Oralno','Analno','Doggy','Masa\u017ea','Ljubljenje','Fetish','Rimming','69','Dominacija','Dopisivanje','Hotline','Starije','Upoznavanje','Drkanje','Dobar sex'],
         LOCS=['Vlastiti prostor','Auto','Hotel','Vani','Mogu putovati'],
-        C={'Grad Zagreb':['Zagreb','Velika Gorica','Samobor','Zapresic','Dugo Selo','Sveta Nedelja','Jastrebarsko','Vrbovec','Ivanic-Grad','Rugvica'],'Dalmacija':['Split','Zadar','Dubrovnik','Sibenik','Makarska','Trogir','Solin','Omis','Sinj','Metkovic','Imotski','Kastela','Biograd na Moru','Knin','Vodice','Vrgorac','Gospic','Ploce','Novalja'],'Slavonija':['Osijek','Slavonski Brod','Vukovar','Vinkovci','Pozega','Dakovo','Nova Gradiska','Virovitica','Nasice','Zupanja','Slatina','Orahovica','Belisce','Beli Manastir','Donji Miholjac'],'Istra i Primorje':['Rijeka','Pula','Opatija','Rovinj','Porec','Umag','Labin','Buzet','Pazin','Crikvenica','Senj','Krk','Mali Losinj','Rab','Novi Vinodolski','Delnice'],'Središnja Hrvatska':['Varazdin','Karlovac','Sisak','Bjelovar','Koprivnica','Cakovec','Krizevci','Kutina','Petrinja','Zabok','Krapina','Ogulin','Duga Resa','Daruvar','Zlatar','Pregrada']};
+        C={
+        'HR':{'Grad Zagreb':['Zagreb','Velika Gorica','Samobor','Zapresic','Dugo Selo','Sveta Nedelja','Jastrebarsko','Vrbovec','Ivanic-Grad','Rugvica'],'Dalmacija':['Split','Zadar','Dubrovnik','Sibenik','Makarska','Trogir','Solin','Omis','Sinj','Metkovic','Imotski','Kastela','Biograd na Moru','Knin','Vodice','Vrgorac','Gospic','Ploce','Novalja'],'Slavonija':['Osijek','Slavonski Brod','Vukovar','Vinkovci','Pozega','Dakovo','Nova Gradiska','Virovitica','Nasice','Zupanja','Slatina','Orahovica','Belisce','Beli Manastir','Donji Miholjac'],'Istra i Primorje':['Rijeka','Pula','Opatija','Rovinj','Porec','Umag','Labin','Buzet','Pazin','Crikvenica','Senj','Krk','Mali Losinj','Rab','Novi Vinodolski','Delnice'],'Središnja Hrvatska':['Varazdin','Karlovac','Sisak','Bjelovar','Koprivnica','Cakovec','Krizevci','Kutina','Petrinja','Zabok','Krapina','Ogulin','Duga Resa','Daruvar','Zlatar','Pregrada']},
+        'RS':{'Beograd':['Beograd','Zemun','Novi Beograd'],'Vojvodina':['Novi Sad','Subotica','Zrenjanin','Pancevo','Sombor','Kikinda','Vrbas','Sremska Mitrovica','Ruma','Indjija'],'Šumadija':['Kragujevac','Jagodina','Arandjelovac'],'Južna Srbija':['Niš','Leskovac','Vranje','Pirot','Prokuplje'],'Zapadna Srbija':['Čačak','Užice','Kraljevo','Valjevo','Šabac','Kruševac','Novi Pazar'],'Istočna Srbija':['Smederevo','Požarevac','Bor','Zaječar']},
+        'BA':{'Sarajevo':['Sarajevo','Ilidža'],'Banja Luka':['Banja Luka','Prijedor','Gradiška'],'Tuzla':['Tuzla','Lukavac','Živinice'],'Zenica':['Zenica','Travnik','Bugojno','Kakanj'],'Mostar':['Mostar','Čapljina','Konjic'],'Brčko':['Brčko'],'Bijeljina':['Bijeljina','Zvornik'],'Republika Srpska':['Doboj','Trebinje'],'Federacija BiH':['Bihać','Sanski Most','Livno']}
+        };
+    var curCountry='HR';
 
     var all=[],filt=[],pg=1,PP=30;
 
@@ -594,7 +600,7 @@
         var el=document.getElementById('masonry'),s=(pg-1)*PP,items=filt.slice(s,s+PP);
         if(!items.length){
             if(!all.length){
-                el.innerHTML='<div style="text-align:center;padding:60px 20px"><div style="font-size:36px;margin-bottom:12px">&#128075;</div><h3 style="margin-bottom:8px;color:#2c3e50">Dobrodo\u0161li na BesplatniSMSOglasi.com!</h3><p style="color:#888;margin-bottom:16px;max-width:400px;margin-left:auto;margin-right:auto">Jo\u0161 nema oglasa. Budite prvi koji \u0107e objaviti oglas i prona\u0107i mu\u0161karce u svom podru\u010dju!</p><a href="objavi-oglas.html" style="display:inline-block;background:#27ae60;color:#fff;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:14px">Objavi besplatan oglas</a></div>';
+                el.innerHTML='<div style="text-align:center;padding:60px 20px"><div style="font-size:36px;margin-bottom:12px">&#128075;</div><h3 style="margin-bottom:8px;color:#2c3e50">Dobrodo\u0161li na BesplatniSMSOglasi.com!</h3><p style="color:#888;margin-bottom:16px;max-width:400px;margin-left:auto;margin-right:auto">Jo\u0161 nema oglasa. Budite prvi koji \u0107e objaviti oglas i prona\u0107i žene u svom podru\u010dju!</p><a href="objavi-oglas.html" style="display:inline-block;background:#27ae60;color:#fff;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:14px">Objavi besplatan oglas</a></div>';
             } else {
                 el.innerHTML='<div style="text-align:center;padding:40px 20px;color:#999"><div style="font-size:24px;margin-bottom:8px">&#128269;</div>Nema prona\u0111enih oglasa.<br><a href="javascript:resetFilters()" style="color:#2980b9;font-weight:700">Resetiraj filtre</a></div>';
             }
@@ -606,13 +612,13 @@
             if(l.acts&&l.acts.length)prefHtml+=l.acts.map(function(a){return'<span class="pref-tag pref-act">'+a+'</span>'}).join('');
             if(l.locs&&l.locs.length)prefHtml+=l.locs.map(function(a){return'<span class="pref-tag pref-loc">'+a+'</span>'}).join('');
             return'<div class="item'+(l.vip?' vip-item':'')+'">'+(l.vip?'<span class="vip-dot">VIP</span>':'')+(isNew?'<span class="new-dot">Novo</span>':'')+
-                '<div class="item-head"><a href="/oglas/'+l.id+'" class="item-who" style="color:inherit;text-decoration:none">'+(l.nick||'Muškarac')+', '+l.age+'</a><div class="item-actions"><button class="fav-btn'+(lk?' liked':'')+'" onclick="togFav(\''+l.wa.replace(/'/g,"\\'")+'\','+l.age+',\''+l.ct+'\')">'+(lk?'&#9829;':'&#9825;')+'</button><span class="item-time" title="'+fmtT(l.ts)+'">'+relT(l.ts)+'</span></div></div>'+
-                '<div class="item-meta">'+l.ct+', '+l.rk+(l.height?' &middot; '+l.height+' cm':'')+(l.weight?' &middot; '+l.weight+' kg':'')+'</div>'+
+                '<div class="item-head"><a href="/oglas/'+l.id+'" class="item-who" style="color:inherit;text-decoration:none">'+(l.nick||'Anonimno')+', '+l.age+'</a><div class="item-actions"><button class="fav-btn'+(lk?' liked':'')+'" onclick="togFav(\''+l.wa.replace(/'/g,"\\'")+'\','+l.age+',\''+l.ct+'\')">'+(lk?'&#9829;':'&#9825;')+'</button><span class="item-time" title="'+fmtT(l.ts)+'">'+relT(l.ts)+'</span></div></div>'+
+                '<div class="item-meta">'+(l.ct?l.ct+', ':'')+l.rk+(l.height?' &middot; '+l.height+' cm':'')+(l.weight?' &middot; '+l.weight+' kg':'')+'</div>'+
                 '<div class="item-desc'+(long?' collapsed':'')+'" id="desc'+l.id+'">'+l.d+'</div>'+
                 (long?'<span class="show-more" onclick="expand('+l.id+',this)">Prika\u017ei vi\u0161e &raquo;</span>':'')+
                 (prefHtml?'<div style="margin-bottom:6px;line-height:1.8">'+prefHtml+'</div>':'')+
                 '<div class="item-bottom">'+(l.wa?'<span class="wa-tag blurred" onclick="reveal(this,\''+l.wa+'\','+l.id+')" title="Kliknite za prikaz">WhatsApp: '+l.wa.substring(0,7)+'<span class="wa-hidden"> ** ** **</span></span>':'')+
-                (l.vb?'<span class="vb-tag blurred" onclick="reveal(this,\''+l.vb+'\','+l.id+')" title="Kliknite za prikaz">Viber: '+l.vb.substring(0,7)+'<span class="vb-hidden"> ** ** **</span></span>':'')+
+                ((l.vb||l.wa)?'<span class="vb-tag blurred" onclick="reveal(this,\''+(l.vb||l.wa)+'\','+l.id+')" title="Kliknite za prikaz">Viber: '+(l.vb||l.wa).substring(0,7)+'<span class="vb-hidden"> ** ** **</span></span>':'')+
                 (l.em?'<span class="em-tag blurred" onclick="reveal(this,\''+l.em+'\','+l.id+')" title="Kliknite za prikaz">'+l.em.substring(0,3)+'<span class="em-hidden">*****</span></span>':'')+
                 '<span class="type-tag">'+TL[l.tp]+'</span><span class="views-tag">&#128065; '+l.views+'</span><a href="/oglas/'+l.id+'" class="share-lnk" style="color:#2980b9">Pogledaj &rarr;</a><span class="share-lnk" onclick="shareAd('+l.id+')">Podijeli</span><span class="report-lnk" onclick="openReport('+l.id+')">Prijavi</span></div></div>'
         }).join('');
@@ -624,7 +630,7 @@
     function trackView(id){fetch('/.netlify/functions/ads',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id})}).catch(function(){})}
     function reveal(el,txt,adId){if(el.classList.contains('blurred')){el.classList.remove('blurred');if(adId)trackView(adId);if(el.classList.contains('wa-tag')){var num=txt.replace(/[^0-9+]/g,'');el.innerHTML='<a href="https://wa.me/'+num.replace('+','')+'?text='+encodeURIComponent('Hej, vidio sam tvoj oglas na besplatnismsoglasi.com')+'" target="_blank" rel="noopener" style="color:#27ae60;text-decoration:none">WhatsApp: '+txt+' &#8599;</a>'}else if(el.classList.contains('vb-tag')){var num=txt.replace(/[^0-9+]/g,'');el.innerHTML='<a href="viber://chat?number='+encodeURIComponent(num)+'" target="_blank" rel="noopener" style="color:#7b1fa2;text-decoration:none">Viber: '+txt+' &#8599;</a>'}else{el.innerHTML=txt+' &#128203;'}}else{if(el.classList.contains('wa-tag')||el.classList.contains('vb-tag'))return;try{navigator.clipboard.writeText(txt)}catch(e){}toast('Kopirano: '+txt)}}
     function copyTxt(n){try{navigator.clipboard.writeText(n)}catch(e){}toast('Kopirano: '+n)}
-    function shareAd(id){var l=all.find(function(x){return x.id===id});if(!l)return;var txt=(l.nick||'Muškarac')+', '+l.age+' - '+l.ct+': '+l.d.substring(0,100)+'... Pogledaj vi\u0161e na BesplatniSMSOglasi.com';if(navigator.share){navigator.share({title:'BesplatniSMSOglasi.com oglas',text:txt,url:window.location.href}).catch(function(){})}else{try{navigator.clipboard.writeText(txt)}catch(e){}toast('Oglas kopiran!')}}
+    function shareAd(id){var l=all.find(function(x){return x.id===id});if(!l)return;var txt=(l.nick||'Anonimno')+', '+l.age+' - '+l.ct+': '+l.d.substring(0,100)+'... Pogledaj vi\u0161e na BesplatniSMSOglasi.com';if(navigator.share){navigator.share({title:'BesplatniSMSOglasi.com oglas',text:txt,url:window.location.href}).catch(function(){})}else{try{navigator.clipboard.writeText(txt)}catch(e){}toast('Oglas kopiran!')}}
 
     function renderPg(){
         var tp=Math.ceil(filt.length/PP),c=document.getElementById('paging');
@@ -649,6 +655,7 @@
             fWhen=document.getElementById('fWhen').value,fContact=document.getElementById('fContact').value;
         var now=Date.now();
         filt=all.filter(function(l){
+            if((l.country||'HR')!==curCountry)return false;
             if(l.age<af||l.age>at)return false;
             if(reg&&l.rk!==reg)return false;if(tp&&l.tp!==tp)return false;
             if(cityFilter&&l.ct!==cityFilter)return false;
@@ -662,10 +669,12 @@
         pg=1;render();renderPg();
     }
     var cityFilter='';
-    function updCityOpts(reg,selId){var s=document.getElementById(selId);s.innerHTML='<option value="">Svi gradovi</option>';if(reg&&C[reg])C[reg].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'});else Object.keys(C).forEach(function(r){C[r].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'})})}
+    function updCityOpts(reg,selId){var s=document.getElementById(selId),cc=C[curCountry]||C['HR'];s.innerHTML='<option value="">Svi gradovi</option>';if(reg&&cc[reg])cc[reg].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'});else Object.keys(cc).forEach(function(r){cc[r].forEach(function(c){s.innerHTML+='<option>'+c+'</option>'})})}
     function filterCity(c){cityFilter=c;pg=1;applyFilters();updCityTag();document.getElementById('annonceListe').scrollIntoView({behavior:'smooth'})}
     function clearCity(){cityFilter='';applyFilters();updCityTag()}
     function updCityTag(){var el=document.getElementById('cityTag'),inner=document.getElementById('cityTagInner');if(cityFilter){el.style.display='block';inner.innerHTML=cityFilter+' <span onclick="clearCity()" style="cursor:pointer;font-size:14px;opacity:.7">&times;</span>'}else{el.style.display='none'}}
+    function populateRegions(){var cc=C[curCountry]||C['HR'];['fReg','xRegion'].forEach(function(id){var s=document.getElementById(id);if(!s)return;var v=s.value;s.innerHTML='<option value="">'+(!id.startsWith('x')?'Sve':'Odaberi')+'</option>';Object.keys(cc).forEach(function(r){s.innerHTML+='<option>'+r+'</option>'});s.value=v})}
+    function setCountry(cc,btn){curCountry=cc;document.querySelectorAll('.ctab').forEach(function(b){b.style.background='#e0e0e0';b.style.color='#555';b.classList.remove('active')});btn.style.background='#2c3e50';btn.style.color='#fff';btn.classList.add('active');populateRegions();updCityOpts('','fCity');updCityOpts('','xCity');cityFilter='';updCityTag();updCityBar();applyFilters()}
     function resetFilters(){document.getElementById('fAf').value='';document.getElementById('fAt').value='';document.getElementById('fReg').value='';document.getElementById('fCity').value='';document.getElementById('fT').value='';document.getElementById('fAct').value='';document.getElementById('fLoc').value='';document.getElementById('fWhen').value='';document.getElementById('fContact').value='';document.getElementById('searchInput').value='';cityFilter='';updCityTag();filt=all.slice();pg=1;render();renderPg()}
     function sortList(){
         var s=document.getElementById('sortSel').value,fn={new:function(a,b){return b.ts-a.ts},old:function(a,b){return a.ts-b.ts},young:function(a,b){return a.age-b.age},aged:function(a,b){return b.age-a.age},views:function(a,b){return b.views-a.views}};
@@ -688,7 +697,8 @@
         if(!a){toast('Molimo unesite svoju dob!');return}
         if(!wa&&!vb&&!em){toast('Unesite WhatsApp, Viber ili email!');return}
         toast('Objavljivanje oglasa...');
-        var adBody={nick:nick||'',age:a,height:height,weight:weight,rk:rk||'Grad Zagreb',ct:ct||'',wa:wa,vb:vb||'',em:em||'',d:d||'On traži nju.',tp:tp||'hookup',acts:acts,locs:locs};
+        var defReg=curCountry==='RS'?'Beograd':curCountry==='BA'?'Sarajevo':'Grad Zagreb';
+        var adBody={nick:nick||'',age:a,height:height,weight:weight,country:curCountry,rk:rk||defReg,ct:ct||'',wa:wa,vb:vb||'',em:em||'',d:d||'On traži nju.',tp:tp||'hookup',acts:acts,locs:locs};
         try{var ak=sessionStorage.getItem('go24_admin_pass');if(ak)adBody.adminKey=ak}catch(e){}
         fetch('/.netlify/functions/ads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(adBody)}).then(function(r){
             if(r.status===429)return r.json().then(function(d){toast(d.error||'Previ\u0161e oglasa. Molimo pri\u010dekajte.');throw new Error('rate limited')});
@@ -747,8 +757,14 @@
 
     window.addEventListener('scroll',function(){document.getElementById('bttBtn').classList.toggle('show',window.scrollY>400)});
 
-    (function(){var top15=['Zagreb','Split','Rijeka','Osijek','Zadar','Dubrovnik','Pula','Varazdin','Slavonski Brod','Karlovac','Sibenik','Vukovar','Sisak','Makarska','Koprivnica'];var cb=document.getElementById('cityBar'),h='<span>Gradovi:</span> ';top15.forEach(function(c){h+='<a href="javascript:void(0)" onclick="filterCity(\''+c+'\')">'+c+'</a>'});cb.innerHTML=h})();
-    updFavBadge();loadAds();
+    var TOP_CITIES={
+        'HR':['Zagreb','Split','Rijeka','Osijek','Zadar','Dubrovnik','Pula','Varazdin','Slavonski Brod','Karlovac','Sibenik','Vukovar','Sisak','Makarska','Koprivnica'],
+        'RS':['Beograd','Novi Sad','Niš','Kragujevac','Subotica','Zrenjanin','Čačak','Užice','Kraljevo','Valjevo','Šabac','Kruševac','Novi Pazar','Smederevo','Pancevo'],
+        'BA':['Sarajevo','Banja Luka','Tuzla','Zenica','Mostar','Bijeljina','Brčko','Bihać','Prijedor','Doboj','Trebinje','Travnik','Konjic','Gradiška','Livno']
+    };
+    function updCityBar(){var cities=TOP_CITIES[curCountry]||TOP_CITIES['HR'];var cb=document.getElementById('cityBar'),h='<span>Gradovi:</span> ';cities.forEach(function(c){h+='<a href="javascript:void(0)" onclick="filterCity(\''+c+'\')">'+c+'</a>'});cb.innerHTML=h}
+    updCityBar();
+    updFavBadge();populateRegions();loadAds();
     </script>
 </body>
 </html>

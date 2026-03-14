@@ -13,7 +13,7 @@ function esc(str) {
     return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-var TL = { hookup:'Hookup', date:'Dejt', chat:'Chat', diskretno:'Diskretno', veza:'Veza',  };
+var TL = { hookup:'Hookup', date:'Dejt', chat:'Chat', diskretno:'Diskretno', veza:'Veza', parovi:'Parovi', trojka:'Trojka', 'ona-trazi-nju':'Ona traži nju' };
 
 function maskPhone(ph) {
     if (!ph || ph.length < 7) return ph || '';
@@ -47,8 +47,9 @@ function buildRelatedHtml(relatedAds) {
 }
 
 function buildAdPage(ad, relatedAds) {
-    var nick = esc(ad.nick || 'Muskarac');
-    var city = esc(ad.ct || 'Hrvatska');
+    var nick = esc(ad.nick || 'Anonimno');
+    var countryLabel = ad.country === 'RS' ? 'Srbija' : ad.country === 'BA' ? 'BiH' : 'Hrvatska';
+    var city = esc(ad.ct || countryLabel);
     var region = esc(ad.rk || '');
     var desc = esc(ad.d || '');
     var descShort = desc.substring(0, 155);
@@ -64,7 +65,8 @@ function buildAdPage(ad, relatedAds) {
 
     var contactHtml = '';
     if (ad.wa) contactHtml += '<span class="wa-tag blurred" onclick="reveal(this)" data-v="' + esc(ad.wa) + '" title="Kliknite za prikaz">WhatsApp: ' + maskPhone(ad.wa) + '</span>';
-    if (ad.vb) contactHtml += '<span class="vb-tag blurred" onclick="reveal(this)" data-v="' + esc(ad.vb) + '" title="Kliknite za prikaz">Viber: ' + maskPhone(ad.vb) + '</span>';
+    var vbNum = ad.vb || ad.wa;
+    if (vbNum) contactHtml += '<span class="vb-tag blurred" onclick="reveal(this)" data-v="' + esc(vbNum) + '" title="Kliknite za prikaz">Viber: ' + maskPhone(vbNum) + '</span>';
     if (ad.em) contactHtml += '<span class="em-tag blurred" onclick="reveal(this)" data-v="' + esc(ad.em) + '" title="Kliknite za prikaz">' + esc(ad.em).substring(0, 3) + '*****</span>';
 
     return '<!DOCTYPE html>\n<html lang="hr">\n<head>\n' +
@@ -246,7 +248,7 @@ function buildAdPage(ad, relatedAds) {
         (isNew ? '<span class="new-dot">Novo</span>' : '') +
         '<div class="item-head"><span class="item-who">' + nick + ', ' + age + '</span>' +
         '<span class="item-time">' + relTime(ad.ts) + '</span></div>' +
-        '<div class="item-meta">' + city + ', ' + region +
+        '<div class="item-meta">' + (city ? city + ', ' : '') + region +
         (ad.height ? ' &middot; ' + ad.height + ' cm' : '') +
         (ad.weight ? ' &middot; ' + ad.weight + ' kg' : '') +
         ' &middot; ' + typeLabel + '</div>' +
@@ -376,7 +378,7 @@ exports.handler = async function(event) {
         statusCode: 200,
         headers: {
             'Content-Type': 'text/html; charset=utf-8',
-            'Cache-Control': 'public, max-age=300, s-maxage=600'
+            'Cache-Control': 'public, max-age=60, s-maxage=120'
         },
         body: buildAdPage(ad, related)
     };
